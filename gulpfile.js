@@ -35,7 +35,7 @@ var templates		=	[
 	devUrl + 'everything'
 ]
 
-gulp.task('css', function{
+gulp.task('css', function(){
 	return gulp.src('./src/css/mnml.css')
 		.pipe(postcss(plugins))
 		.pipe(size({gzip: true, showFIles: true}))
@@ -43,14 +43,14 @@ gulp.task('css', function{
 		.pipe(browserSync.stream());
 });
 
-gulp.task('img', function{
+gulp.task('img', function(){
 	return gulp.src('./src/img/**.*')
 		.pipe(imagemin({verbose: true}))
 		.pipe(gulp.dest('./dest'))
 		.pipe(browserSync.stream());
 });
 
-gulp.task('watch', function{
+gulp.task('watch', function(){
 	browserSync.init({
 		files: [
 			'*.php'
@@ -65,7 +65,7 @@ gulp.task('watch', function{
 	gulp.watch(['./src/img/*'], ['pics']);
 });
 
-gulo.task('uncss', function{
+gulp.task('uncss', function(){
 	return gulp.src('./dest/mnml.css')
 		.pipe(uncss({html: templates}))
 		.pipe(postcss(plugins))
@@ -74,4 +74,4 @@ gulo.task('uncss', function{
 		.pipe(browserSync.stream());
 });
 
-gulp.task('default', ['css', 'img' 'watch']);
+gulp.task('default', ['css', 'img', 'watch']);
