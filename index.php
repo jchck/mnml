@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="px3 py4">
+<div class="px3 py4" style="min-height: 85vh">
 
 	<?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
 
-			<h1 class="measure"><a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a> : <?php the_title(); ?></h1>
+			<h1 class="measure"><a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a> : <a href="<?= the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
 			<?php the_content(); ?>
 
