@@ -1,3 +1,31 @@
+/* root font size */
+
 html{ font-size: 1.5em }
+
+/* responsive heading scale */
+
+h1, .h1{ font-size: calc( var(--h1) / 1.5 ) }
+
+h2, .h2{ font-size: calc( var(--h2) / 1.5 ) }
+
+h3, .h3{ font-size: calc( var(--h3) / 1.5 ) }
+
+@media (--breakpoint-sm) {
+	h1, .h1{ font-size: calc( var(--h1) / 1.1 ) }
+
+	h2, .h2{ font-size: calc( var(--h2) / 1.1 ) }
+
+	h3, .h3{ font-size: calc( var(--h3) / 1.1 ) }
+}
+
+@media (--breakpoint-md) {
+	h1, .h1{ font-size: var(--h1) }
+
+	h2, .h2{ font-size: var(--h2) }
+
+	h3, .h3{ font-size: var(--h3) }
+}
+
+/* measure */
 
 .measure{ max-width: 30em; }
