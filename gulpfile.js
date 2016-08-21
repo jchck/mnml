@@ -1,4 +1,4 @@
-var devUrl			= 'http://vagrant.local/jchck/';
+var devUrl			= 'http://vagrant.local/mnml/';
 
 var autoprefixer	=	require('autoprefixer');
 var browserSync		=	require('browser-sync').create();
