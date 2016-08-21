@@ -100,3 +100,19 @@ function jetpack_css(){
 }
 
 add_action( 'wp_print_styles', __NAMESPACE__ . '\\jetpack_css');
+
+
+/**
+ *
+ * Add's .measure to all <p>'s inside of the_content()
+ * @link http://wordpress.stackexchange.com/a/51682
+ *
+ */
+function measure($content){
+	if (is_main_query()) {
+		return preg_replace('/<p([^>]+)?>/', '<p$1 class="measure">', $content, -1);
+	}
+}
+
+add_filter('the_content', __NAMESPACE__ . '\\measure');
+
