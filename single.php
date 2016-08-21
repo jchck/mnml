@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="px3 py4" style="min-height: 85vh">
+<div class="px2 md-px3 py2 md-py4" style="min-height: 85vh">
 
 	<?php while (have_posts()) : the_post(); ?>
 

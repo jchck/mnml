@@ -2,9 +2,9 @@
 
 <?php get_header(); ?>
 	
-	<div class="px3 py4" style="min-height: 85vh">
+	<div class="px2 md-px3 py2 md-py4" style="min-height: 85vh">
 
-		<h1 class="measure"><a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a> : All Posts</h1>
+		<h1 class="measure"><a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a> : all posts</h1>
 
 		<dl>
 
