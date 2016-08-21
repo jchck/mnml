@@ -32,7 +32,8 @@ var plugins			=	[
 
 var templates		=	[
 	devUrl,
-	devUrl + 'everything'
+	devUrl + 'everything',
+	devUrl + 'all'
 ]
 
 gulp.task('css', function(){
