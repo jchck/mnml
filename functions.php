@@ -31,6 +31,14 @@ function setup(){
 
 	/**
 	 *
+	 * Theme support for doc title tags
+	 * @link https://codex.wordpress.org/Title_Tag
+	 */
+	add_theme_support( 'title-tag' );
+
+
+	/**
+	 *
 	 * Turn on HTML5 support
 	 * @see http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
 	 *
